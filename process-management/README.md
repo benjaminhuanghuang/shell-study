@@ -3,7 +3,9 @@
 - from [玩转Linux命令行 - 进程管理 - EP4](https://www.youtube.com/watch?v=uQAmUSJii6I）
 
 
-## strss  给系统增加负载
+## stress  给系统增加负载
+需要安装
+
 ```
 -t  --timeout N :  N秒后停止
 -c  --cpu N     :  产生N个进程，运行sqrt()
@@ -13,7 +15,7 @@
 ```
 sample
 ```
-  strecc --cpu 8 --io 4 --vm 2 --vm-bytes 128M --timeout 10s
+  stress --cpu 8 --io 4 --vm 2 --vm-bytes 128M --timeout 10s
 ```
 
 ## top  现实进程信息
