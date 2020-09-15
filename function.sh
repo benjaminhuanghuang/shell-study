@@ -1,3 +1,32 @@
+###########################################
+# Create function and Call function
+# Goodby()
+###########################################
+function Hello(){
+   echo "Hello"
+}
+
+
+Goodby(){
+   echo "Goodby"
+}
+
+Hello
+
+Goodby
+
+
+###########################################
+# Pass parameter
+###########################################
+Greet(){
+    local LNAME=$1
+    echo "Greet $LNAME"
+}
+
+
+
+
 lower(){
     shift # left shift 1 bit
 

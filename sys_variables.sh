@@ -1,3 +1,16 @@
+for SYS_VAR in USER TERM HOME HOST
+do 
+    echo "The $SYS_VAR is: $($SYS_VAR)"
+    echo "\n"
+done
+
+
+if [ -z $EDITOR]
+then
+    echo "The EDITOR variable is not set"     # empty
+    echo "\n"
+fi
+
 echo $SHELL # echo $0   
 let PID=pgrep chrome
 cat /proc/$PID/environ | tr '\0' '\n'
