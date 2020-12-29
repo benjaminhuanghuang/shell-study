@@ -1,0 +1,5 @@
+
+
+```
+  ls -lah /etc/*release
+```
