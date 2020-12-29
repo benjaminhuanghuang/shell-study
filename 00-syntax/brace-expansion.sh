@@ -1,0 +1,1 @@
+mkdir ./tmp{old,new,dist,bugs}
