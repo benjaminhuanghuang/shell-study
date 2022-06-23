@@ -1,4 +1,6 @@
 #!/bin/bash
+# from git to server
+  
 DATE=$(date +%F_%T)
 
 TOMCAT_NAME=$1
@@ -27,6 +29,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # 部署
+# egrep -v "grep|$$" exclude grep and currenty script
 TOMCAT_PID=$(ps -ef |grep "$TOMCAT_NAME" |egrep -v "grep|$$" |awk 'NR==1{print $2}')
 [ -n "$TOMCAT_PID" ] && kill -9 $TOMCAT_PID
 [ -d $ROOT ] && mv $ROOT $BACKUP_DIR/${TOMCAT_NAME}_ROOT$DATE
