@@ -19,6 +19,7 @@ echo -e "4. Deploy LNMP"
 echo -e "9. Quit"
 
 function command_status_check() {
+  # check status of last command 
 	if [ $? -ne 0 ]; then
 		echo $1
 		exit
