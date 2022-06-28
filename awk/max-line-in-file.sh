@@ -1,0 +1,1 @@
+awk '{if(length($0)>length(a)) a = $0} END{print a}'
