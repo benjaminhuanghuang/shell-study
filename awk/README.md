@@ -10,11 +10,15 @@ awk 依次处理文件的每一行，并读取里面的每一个字段。对于�
 $ awk '{print $0}' demo.txt    # $0代表当前行，执行结果是把每一行原样打印出来
 ```
 ## 命令行参数
--F 参数指定分隔符为冒号
+-F 选项将 FS 变量设置为字符 :
 ```
   awk -F ':' '{ print $1 }' demo.txt
 ```
 
+字段分隔符也可以在 BEGIN 函数块中设置：
+```
+  awk 'BEGIN { FS=":" } {print $1 }' /etc/passwd
+```
 
 ## Variable
 
