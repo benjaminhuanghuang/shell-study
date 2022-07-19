@@ -1,0 +1,1 @@
+awk -f insert-col.awk input.csv output.csv
